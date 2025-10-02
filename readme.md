@@ -66,7 +66,6 @@ Usa `Datos_Spotify.xlsx` o `Datos_Spotify.json` (artistas, discográficas, álbu
 │   ├── 📄 app.js               # Configuración Express (COMPLETAR)
 │   ├── 📁 config/
 │   │   ├── 📄 database.js      # Conexión MySQL (COMPLETAR)
-│   │   └── 📄 index.js         # Config central (COMPLETAR)
 │   ├── 📁 models/              # Modelos de datos (COMPLETAR)
 │   │   ├── 📄 Usuario.js
 │   │   ├── 📄 Artista.js
@@ -100,16 +99,10 @@ Usa `Datos_Spotify.xlsx` o `Datos_Spotify.json` (artistas, discográficas, álbu
 │   │   ├── 📄 metodosPagoController.js
 │   │   ├── 📄 pagosController.js
 │   │   └── 📄 vistasController.js  # ⭐ EJERCICIOS ADICIONALES
-│   ├── 📁 middlewares/         # Middlewares (COMPLETAR)
-│   │   ├── 📄 errorHandler.js
-│   │   ├── 📄 validaciones.js
-│   │   ├── 📄 auth.js          # Opcional
-│   │   └── 📄 rateLimiting.js
 │   ├── 📁 data/               # Datos de referencia ✅
 │   │   ├── 📄 Datos_Spotify.json
 │   │   └── 📄 Datos_Spotify.xlsx
 │   └── 📁 docs/               # Documentación ✅
-│       ├── 📄 README.md
 │       └── 📄 swagger.yaml
 ```
 
