@@ -4,15 +4,10 @@
  */
 
 const express = require("express");
-const cors = require("cors");
-const helmet = require("helmet");
-const rateLimit = require("express-rate-limit");
 
 // TODO: Importar las rutas
 
 const app = express();
-
-// TODO: Configurar CORS
 
 // TODO: Configurar parseo de JSON
 // Ejemplo: app.use(express.json());
