@@ -127,7 +127,6 @@ Usa `Datos_Spotify.xlsx` o `Datos_Spotify.json` (artistas, discográficas, álbu
 
 ### 5. **Rutas** 
 - Conectar controladores con endpoints
-- Aplicar middlewares de validación
 
 ### 6. **⭐ Ejercicios Adicionales** 
 - `vistasController.js` - Consultas con JOINs complejos
