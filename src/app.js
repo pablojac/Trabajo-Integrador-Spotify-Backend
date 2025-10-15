@@ -1,22 +1,45 @@
-/**
- * Configuración principal de la aplicación Express
- * Los estudiantes deben completar la configuración de middlewares y rutas
- */
-
+//importación de rutas
 const express = require("express");
+const { sequelize } = require("./config/database.js");
 
-// TODO: Importar las rutas
+// Importación las Router correctamente
+// const albumesRoutes = require('./routes/albumes.js');
+const artistasRoutes = require('./routes/artistas.js');
 
+// Crear una instancia de Express
 const app = express();
+const PORT = process.env.PORT || 3000;
+// Iniciar el servidor
+app.listen(PORT, () => {
+    console.log(`Servidor escuchando en el puerto http://localhost:${PORT}`);
+});
 
-// TODO: Configurar parseo de JSON
-// Ejemplo: app.use(express.json());
+// Configurar parseo de JSON
+app.use(express.json());
 
-// TODO: Configurar rutas
-// Ejemplo: app.use('/api/v1/usuarios', usuariosRoutes);
 
-// TODO: Configurar middleware de manejo de errores (debe ir al final)
+// Ruta de bienvenida
+app.get("/api/v1", (req, res) => {  
+    try {
+        res.send("¡Bienvenido a la API Spotify!");
+    } catch (error) {
+        res.status(500).send("Error en el servidor")
+    }
+});
 
-// TODO: Configurar ruta 404
+// Middleware de autenticación de base de datos
+sequelize.authenticate()
+    .then(() => {
+        console.log('Conexión a la base de datos establecida exitosamente.');
+    })
+    .catch(error => {
+        console.error('No se pudo conectar a la base de datos:', error);
+    });
+;
+
+// Rutas app
+// app.use('/api/v1/albumes', albumesRoutes);
+app.use('/api/v1/artistas', artistasRoutes);
+
 
 module.exports = app;

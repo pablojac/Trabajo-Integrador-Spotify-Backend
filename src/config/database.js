@@ -4,7 +4,7 @@
  */
 const { Sequelize } = require('sequelize');
 const process = require('process');
-const { listen } = require('../app');
+
 process.loadEnvFile();
 
 
